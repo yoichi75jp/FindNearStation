@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "702327500564",
+    "project_id": "findnearstation"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702327500564:android:1f3d8311bdf25201",
+        "android_client_info": {
+          "package_name": "com.aufthesis.findnearstation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZex5Ky75VNm29vDb5GAUVm2JLr_CNZps"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-64731121-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

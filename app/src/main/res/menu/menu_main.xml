@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!--item
+        android:id="@+id/action_train"
+        android:icon="@drawable/train"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:title="路線選択"/-->
+
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@drawable/ic_action_cancel"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_close"/>
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:orderInCategory="101"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_update"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:orderInCategory="102"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_setting"/>
+
+</menu>

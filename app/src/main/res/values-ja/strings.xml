@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">駅びゅう</string>
+    <string name="action_settings">設定</string>
+    <string name="version">バージョン：</string>
+
+    <string name="area">AREA</string>
+    <string name="disp">DISP</string>
+
+    <string-array name="arealist">
+        <item>500m圏内</item>
+        <item>1km圏内</item>
+        <item>2km圏内</item>
+        <item>5km圏内</item>
+        <item>10km圏内</item>
+        <item>20km圏内</item>
+    </string-array>
+
+    <string-array name="dispnumlist">
+        <item>1件</item>
+        <item>5件</item>
+        <item>10件</item>
+        <item>20件</item>
+    </string-array>
+
+    <string-array name="direction">
+        <item>　北　</item>
+        <item>北北東</item>
+        <item>北　東</item>
+        <item>東北東</item>
+        <item>　東　</item>
+        <item>東南東</item>
+        <item>南　東</item>
+        <item>南南東</item>
+        <item>　南　</item>
+        <item>南南西</item>
+        <item>南　西</item>
+        <item>西南西</item>
+        <item>　西　</item>
+        <item>西北西</item>
+        <item>北　西</item>
+        <item>北北西</item>
+    </string-array>
+
+    <!--Label-->
+    <string name="compassLabel">駅の方角（コンパス）</string>
+    <string name="settingsLabel">設定画面</string>
+
+    <!--測位できないときのメッセージ-->
+    <string name="notPositioningTitle">測位できません</string>
+    <string name="notPositioningMessage">位置情報をONに設定してください</string>
+    <string name="disablePositioningMessage">利用可能な測位方法が取得できませんでした</string>
+    <string name="notGetPositioningInfoMessage">位置情報が取得できませんでした</string>
+    <string name="gps">位置情報が取得できません。\nGPSをONにしてください。</string>
+
+    <string name="available">%1$sが利用可能です</string>
+    <string name="positioning">   位置測位中&#8230;</string>
+
+    <!--駅検索結果-->
+    <string name="notFoundStation">近くに駅が見付かりませんでした。</string>
+    <string name="notFoundStation2">この範囲内に駅は見付かりませんでした。</string>
+    <string name="foundStation">%1$d件の駅が見付かりました</string>
+    <string name="omit">%1$d件目以降省略</string>
+
+    <!--コンパス-->
+    <string name="toStation">%1$s まで</string>
+    <string name="direction">%1$s  の方角</string>
+    <string name="distance">距離およそ %1$s (m)</string>
+
+    <!--設定画面-->
+    <string name="searchArea">検索エリア</string>
+    <string name="displayNum">駅検索結果表示件数</string>
+    <string name="select">選択</string>
+    <string name="selectResult">%1$sを選択しました。</string>
+
+    <!--アプリケーションを終了するときのメッセージ-->
+    <string name="exitTile">終了メニュー</string>
+    <string name="exitMessage">アプリケーションを終了しますか？</string>
+    <string name="exitOK">終了</string>
+    <string name="exitCancel">キャンセル</string>
+
+    <string name="count_use">count_use</string>
+    <string name="count_induce">count_induce</string>
+
+    <string name="induce_title">いつもご利用ありがとうございます</string>
+    <string name="induce_message">操作性や仕様について、ご要望またはご不満な点などありましたらコメントとご評価頂ければ幸いです。\n今後ともよろしくお願いします。</string>
+    <string name="induce_ok">評価する</string>
+    <string name="induce_cancel">後で</string>
+
+    <string name="menu_close">終了</string>
+    <string name="menu_update">更新</string>
+    <string name="menu_setting">設定</string>
+
+</resources>

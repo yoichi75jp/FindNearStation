@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Find Nearest Station</string>
+    <string name="action_settings">Settings</string>
+    <string name="version">Version : </string>
+
+    <string name="area">AREA</string>
+    <string name="disp">DISP</string>
+
+    <string-array name="arealist">
+        <item>500m range</item>
+        <item>1km range</item>
+        <item>2km range</item>
+        <item>5km range</item>
+        <item>10km range</item>
+        <item>20km range</item>
+    </string-array>
+
+    <string-array name="dispnumlist">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="direction">
+        <item>North</item>
+        <item>North-northeast</item>
+        <item>Northeast</item>
+        <item>East-northeast</item>
+        <item>East</item>
+        <item>East-southeast</item>
+        <item>Southeast</item>
+        <item>South-southeast</item>
+        <item>South</item>
+        <item>South-southwest</item>
+        <item>Southwest</item>
+        <item>West-southwest</item>
+        <item>West</item>
+        <item>West-northwest</item>
+        <item>Northwest</item>
+        <item>North-northwest</item>
+    </string-array>
+
+    <!--Label-->
+    <string name="compassLabel">Direction of station(compass)</string>
+    <string name="settingsLabel">Settings</string>
+
+    <!--測位できないときのメッセージ-->
+    <string name="notPositioningTitle">You can not positioning</string>
+    <string name="notPositioningMessage">Please set the position information to the ON</string>
+    <string name="disablePositioningMessage">Positioning methods available could not be obtained</string>
+    <string name="notGetPositioningInfoMessage">Position information could not be obtained</string>
+    <string name="gps">Position information can not be retrieved.\nPlease to ON the GPS.</string>
+
+    <string name="available">%1$s is available</string>
+    <string name="positioning">   Positioning&#8230;</string>
+
+    <!--駅検索結果-->
+    <string name="notFoundStation">The station was not found in the vicinity.</string>
+    <string name="notFoundStation2">Station within this range was not found.</string>
+    <string name="foundStation">It is %1$d station found</string>
+    <string name="omit">No more will omit : %1$d</string>
+
+    <!--コンパス-->
+    <string name="toStation">To the %1$s station</string>
+    <string name="direction">Direction : %1$s</string>
+    <string name="distance">Distance about %1$s (m)</string>
+
+    <!--設定画面-->
+    <string name="searchArea">Search Area</string>
+    <string name="displayNum">Station search result display number</string>
+    <string name="select">Select</string>
+    <string name="selectResult">Selected the %1$s</string>
+
+    <!--アプリケーションを終了するときのメッセージ-->
+    <string name="exitTile">Exit menu</string>
+    <string name="exitMessage">Do you want to exit the application?</string>
+    <string name="exitOK">Exit</string>
+    <string name="exitCancel">Cancel</string>
+
+    <string name="count_use">count_use</string>
+    <string name="count_induce">count_induce</string>
+
+    <string name="induce_title">Thank you for always using this App</string>
+    <string name="induce_message">I would be pleased if you could evaluate it and comments, if you have any requests or dissatisfaction about usability and specifications.\nI look forward to working with you.</string>
+    <string name="induce_ok">Evaluate</string>
+    <string name="induce_cancel">Later</string>
+
+    <string name="menu_close">Close</string>
+    <string name="menu_update">Update</string>
+    <string name="menu_setting">Setting</string>
+
+</resources>

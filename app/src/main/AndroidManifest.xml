@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aufthesis.findnearstation">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="ANDROID.PERMISSION.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--2015/07/02 公開アプリでMap表示するように追記-->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <!---2015/07/02 ここまで-->
+
+    <!-- Optional permission for reliable local dispatching on non-Google Play devices -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_ekiview"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <uses-library android:name="com.google.android.maps"/>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CompassActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/compassLabel"/>
+
+        <activity android:name=".SettingActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/settingsLabel"/>
+
+        <!--activity android:name=".CatalogActivity"
+            android:screenOrientation="portrait"
+            android:label="カタログ"/-->
+
+        <!-- Add the following meta-data for devices running Google Play service. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- 取得したAPIキーはここに記述　GoogleMapAPI KEY -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDdHBEcOwBBVFxMNEOMAffFuMnsReW9Euo" />
+
+        <!--AIzaSyDdHBEcOwBBVFxMNEOMAffFuMnsReW9Euo:本番-->
+        <!--AIzaSyB1IIxXdhmUG8dRp2HrCE4X2zeF5vQbZWw:debug-->
+        <!--広告用-->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <!-- [START firebase_service] -->
+        <service
+            android:exported="false"
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+
+
+        Google Analytics SDK v4 for Android - Getting Started
+
+        This document describes how to get started using the Google Analytics SDK v4 for Android.
+
+        Before you Begin
+
+        Before implementing the SDK, make sure you have the following:
+
+        Install the Android SDK
+        Download the Google Play Services SDK
+        At least one Google Analytics property and app view (profile) to which to send data from your app.
+        Note: Google Analytics can be used and will work on devices that do not have Google Play Services. In this case you still download and use the Google Play Services SDK and Google Analytics will automatically fall back to local dispatching.
+        Getting Started
+
+        There are three steps to getting started with the SDK:
+
+        Update AndroidManifest.xml
+        Initialize Trackers
+        Create a Configuration XML file
+        This guide uses code snippets from the Hello World Android app sample application. The complete source for this project is available on GitHub, under the hello-world-android-app repo.
+
+        After completing these steps, you'll be able to measure the following with Google Analytics:
+
+        App installations
+        Active users and demographics
+        Screens and user engagement
+        Crashes and exceptions
+        1. Updating AndroidManifest.xml
+
+        Analytics requires INTERNET and ACCESS_NETWORK_STATE permissions. Optionally a WAKE_LOCK permission can be requested to improve dispatching on non-Google Play devices. To use a custom application class such as MyApp, it needs to be set in the AndroidManifest as the application name attribute. The following is a snippet for common GoogleAnalytics configuration in ApplicationManifest.xml:
+
+        <!-- Optionally, register AnalyticsReceiver and AnalyticsService to support background
+             dispatching on non-Google Play devices -->
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <!-- Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting -->
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+    </application>
+
+</manifest>

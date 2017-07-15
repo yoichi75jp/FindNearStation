@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+    defaultConfig {
+        applicationId "com.aufthesis.findnearstation"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 36
+        versionName '1.3.8' // 2017/07/14 v1.3.8
+        // Enabling multidex support.
+        // Error:The number of method references in a .dex file cannot exceed 64Kの対応
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    return true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.0.0-beta2'
+    implementation 'com.google.android.gms:play-services-analytics:11.0.2'
+    implementation 'com.google.android.gms:play-services-maps:11.0.2'
+    implementation 'com.google.firebase:firebase-core:11.0.2'  // analyticsを実装
+    implementation 'com.google.firebase:firebase-crash:11.0.2' // crashを実装
+    implementation 'com.google.firebase:firebase-ads:11.0.2'
+    implementation 'com.google.firebase:firebase-appindexing:11.0.2'
+    implementation 'com.google.firebase:firebase-messaging:11.0.2'
+}
+apply plugin: 'com.google.gms.google-services'
