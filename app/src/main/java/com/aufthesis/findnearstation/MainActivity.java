@@ -136,8 +136,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         DBOpenHelper dbHelper = new DBOpenHelper(this);
         m_db = dbHelper.getDataBase();
         m_locationMgr = (LocationManager) getSystemService(LOCATION_SERVICE);
-        m_list_station = (ListView) findViewById(R.id.list_station);
-        m_adView = (AdView)this.findViewById(R.id.adView);
+        m_list_station = findViewById(R.id.list_station);
+        m_adView = this.findViewById(R.id.adView);
 
         //APIレベル23以降でパーミッション確認関数
         if(Build.VERSION.SDK_INT >= 23)
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         catch (Exception e) {
             String exp = e.getMessage();
         }
-        m_spinner = (Spinner) findViewById(R.id.spinner_area);
+        m_spinner = findViewById(R.id.spinner_area);
         //spinner.setAdapter(adapter);
         m_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -360,7 +360,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         setMap();
         if(m_adView == null)
         {
-            m_adView = (AdView)this.findViewById(R.id.adView);
+            m_adView = this.findViewById(R.id.adView);
             //バナー広告
             AdRequest adRequest = new AdRequest.Builder().build();
             if(m_adView != null) m_adView.loadAd(adRequest);/**/
