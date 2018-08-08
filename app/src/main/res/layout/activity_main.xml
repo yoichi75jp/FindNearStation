@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adUnitId="ca-app-pub-1485554329820885/9952380258"
-            ads:adSize="BANNER" />
+            ads:adSize="SMART_BANNER" />
 
         <!--ads:adUnitId="ca-app-pub-1485554329820885/9952380258"本番-->
         <!--ads:adUnitId="ca-app-pub-3940256099942544/6300978111"test-->
