@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '28.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.aufthesis.findnearstation"
         minSdkVersion 14
@@ -26,13 +26,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
-    implementation 'com.google.android.gms:play-services-analytics:16.0.3'
-    implementation 'com.google.android.gms:play-services-maps:15.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.3'  // analyticsを実装
-    implementation 'com.google.firebase:firebase-crash:16.2.0' // crashを実装
-    implementation 'com.google.firebase:firebase-ads:15.0.1'
-    implementation 'com.google.firebase:firebase-appindexing:16.0.1'
-    implementation 'com.google.firebase:firebase-messaging:17.3.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.google.android.gms:play-services-analytics:16.0.8'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.9'  // analyticsを実装
+    implementation 'com.google.firebase:firebase-crash:16.2.1' // crashを実装
+    implementation 'com.google.firebase:firebase-ads:17.2.0'
+    implementation 'com.google.firebase:firebase-appindexing:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
 }
 apply plugin: 'com.google.gms.google-services'
